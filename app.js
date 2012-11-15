@@ -6,13 +6,22 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
-    name: 'VoucherGuideForSilvers',
+	name: 'VoucherGuideForSilvers',
 
-    requires: [
-        'Ext.MessageBox'
-    ],
+	requires: [
+		'Ext.MessageBox'
+	],
 
-    views: ['Main'],
+	views: [
+		'Main',
+		'Home',
+		'Settings',
+		'News'
+	],
+	
+	controllers: [
+		'MainNavController'
+	],
 
     icon: {
         '57': 'resources/icons/Icon.png',
