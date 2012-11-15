@@ -11,6 +11,10 @@ Ext.define('VoucherGuideForSilvers.view.Home', {
 
 		items: [{
 			xtype: 'button',
+			id: 'infoListBtn',
+			text: '안내'
+		}, {
+			xtype: 'button',
 			id: 'newsListBtn',
 			text: '뉴스보기'
 		}, {

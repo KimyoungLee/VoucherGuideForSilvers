@@ -16,7 +16,8 @@ Ext.application({
 		'Main',
 		'Home',
 		'Settings',
-		'News'
+		'News',
+		'Info'
 	],
 	
 	controllers: [

@@ -18,6 +18,9 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 		}, {
 			xtype: 'newsListPanel',
 			hidden: true
+		}, {
+			xtype: 'infoListPanel',
+			hidden: true
 		}]
 	}
 });
