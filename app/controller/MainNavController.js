@@ -9,11 +9,17 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 				tap: 'onNewsListBtnTap'
 			}, infoListBtn : {
 				tap: 'onInfoListBtnTap'
+			}, searchBtn: {
+				tap: 'onSearchBtnTap'
+			}, relativeSiteBtn: {
+				tap: 'onrRlativeSiteBtnTap'
 			}
 		}, refs : {
 			settingsBtn: '#settingsBtn',
 			newsListBtn: '#newsListBtn',
-			infoListBtn: '#infoListBtn'
+			infoListBtn: '#infoListBtn',
+			searchBtn: '#searchBtn',
+			relativeSiteBtn: '#relativeSiteBtn'
 		}
 	},
 	
@@ -33,6 +39,20 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 	
 	onInfoListBtnTap: function(button, e, options) {
 		button.up('main').animateActiveItem('infoListPanel', {
+			type: 'slide',
+			direction: 'left'
+		});
+	},
+	
+	onSearchBtnTap: function(button, e, options) {
+		button.up('main').animateActiveItem('searchPanel', {
+			type: 'slide',
+			direction: 'left'
+		});
+	},
+	
+	onrRlativeSiteBtnTap: function(button, e, options) {
+		button.up('main').animateActiveItem('relativeSitePanel', {
 			type: 'slide',
 			direction: 'left'
 		});

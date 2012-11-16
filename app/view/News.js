@@ -5,11 +5,11 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 	requires: ['Ext.TitleBar', 'Ext.dataview.List'],
 	
 	config: {
-		title: '뉴스',
+		title: '종합뉴스',
 		
 		items: [{
 			xtype: 'titlebar',
-			title: '뉴스'
+			title: '종합뉴스'
 		}, {
 			xtype: 'list',
 			id: 'newsList',

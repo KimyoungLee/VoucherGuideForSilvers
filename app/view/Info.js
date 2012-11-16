@@ -5,11 +5,11 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 	requires: ['Ext.TitleBar'],
 	
 	config: {
-		title: '안내',
+		title: '서비스안내',
 		
 		items: [{
 			xtype: 'titlebar',
-			title: '안내'
+			title: '서비스안내'
 		}]
 	}
 });
