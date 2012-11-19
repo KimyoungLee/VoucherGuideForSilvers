@@ -15,13 +15,20 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 		scrollable: true,
 
 		layout : {
-			type : 'vbox'
+			type : 'card'
 		},
 
 		items: [{
 			xtype: 'titlebar',
 			title: '종합뉴스',
-			docked: 'top'
+			docked: 'top',
+			items: [{
+				xtype: 'button',
+				hidden: true,
+				id: 'newsBackBtn',
+				ui: 'back',
+				text: 'Back'
+			}]
 		}, {
 			xtype: 'list',
 			id: 'newsList',
@@ -37,6 +44,15 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 			}],
 
 			itemTpl: '{title}'
+		}, {
+			xtype: 'panel',
+			id: 'newsListView',
+			padding: '12px',
+			tpl: [
+				'<div>{title}</div>',
+				'<div>{content}</div>'
+			],
+			scrollable: true
 		}]
 	}
 });
