@@ -17,11 +17,22 @@ Ext.application({
 		'Home',
 		'Settings',
 		'News',
-		'Info'
+		'Info',
+		'Search',
+		'Site'
 	],
 	
 	controllers: [
-		'MainNavController'
+		'MainNavController',
+		'News'
+	],
+	
+	models: [
+		'News'
+	],
+	
+	stores: [
+		'News'
 	],
 
     icon: {
