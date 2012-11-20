@@ -32,14 +32,16 @@ Ext.application({
 		'News',
 		'Sido',
 		'Gugun',
-		'Organization'
+		'Organization',
+		'Info'
 	],
 	
 	stores: [
 		'News',
 		'Sido',
 		'Gugun',
-		'Organization'
+		'Organization',
+		'Info'
 	],
 
     icon: {
