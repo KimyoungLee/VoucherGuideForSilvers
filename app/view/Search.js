@@ -17,11 +17,20 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 		
 		items: [{
 			xtype: 'titlebar',
-			title: '서비스 제공기관 검색'
-		}, {
-			xtype: 'formpanel',
+			title: '서비스 제공 기관 검색',
+			id: 'searchTitlebar',
+			docked: 'top',
+			items: [{
+				xtype: 'button',
+				id: 'searchBackBtn',
+				hidden: true,
+				ui: 'back',
+				text: 'Back'
+			}]
+		},{
+			xtype: 'panel',
+			id: 'searchFormPanel',
 			flex: 1,
-			
 			items: [{
 				xtype: 'selectfield',
 				name: 'sido',
@@ -54,11 +63,12 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 			id: 'searchOrganizationList',
 			hidden: true,
 			padding: '12px',
+			store: 'organizationStore',
+			emptyText: '검색된 내용이 없습니다.',
 			itemTpl: [
 				'<div>{name}</div>',
 				'<div>{addr}</div>'
-			],
-			scrollable: true
+			]
 		}]
 	}
 });

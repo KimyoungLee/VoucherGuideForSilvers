@@ -12,8 +12,6 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 
 	config: {
 		title: '종합뉴스',
-		styleHtmlContent: true,
-		scrollable: true,
 
 		layout : {
 			type : 'card'
