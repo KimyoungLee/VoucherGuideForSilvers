@@ -24,15 +24,22 @@ Ext.application({
 	
 	controllers: [
 		'MainNavController',
-		'News'
+		'News',
+		'Search'
 	],
 	
 	models: [
-		'News'
+		'News',
+		'Sido',
+		'Gugun',
+		'Organization'
 	],
 	
 	stores: [
-		'News'
+		'News',
+		'Sido',
+		'Gugun',
+		'Organization'
 	],
 
     icon: {

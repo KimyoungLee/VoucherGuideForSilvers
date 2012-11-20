@@ -6,7 +6,8 @@ Ext.define('VoucherGuideForSilvers.controller.News', {
 			newsListPanel: 'newsListPanel',
 			newsListView: '#newsListView',
 			newsBackBtn: '#newsBackBtn',
-			newsList: '#newsList'
+			newsList: '#newsList',
+			newsTitleBar: '#newsTitlebar'
 		},
 		control: {
 			'newsListPanel list': {
@@ -24,14 +25,16 @@ Ext.define('VoucherGuideForSilvers.controller.News', {
 			direction: 'left'
 		});
 		this.getNewsBackBtn().show();
+		this.getNewsTitleBar().setTitle('종합뉴스상세');
 		this.getNewsListView().setData(record.data);
 	},
 	
 	hideNews : function(button, e, options) {
 		this.getNewsBackBtn().hide();
+		this.getNewsTitleBar().setTitle('종합뉴스');
 		this.getNewsListPanel().animateActiveItem(this.getNewsList(), {
 			type: 'slide',
 			direction: 'right'
-		})
+		});
 	}
 });

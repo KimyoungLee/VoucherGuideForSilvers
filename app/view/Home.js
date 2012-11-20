@@ -8,27 +8,37 @@ Ext.define('VoucherGuideForSilvers.view.Home', {
 		
 		styleHtmlContent: true,
 		scrollable: true,
+		
+		layout: {
+			type: 'vbox',
+			align: 'middle',
+		},
 
 		items: [{
 			xtype: 'button',
 			id: 'infoListBtn',
-			text: '서비스안내'
+			text: '서비스안내',
+			width: '200px'
 		}, {
 			xtype: 'button',
 			id: 'newsListBtn',
-			text: '종합뉴스'
+			text: '종합뉴스',
+			width: '200px'
 		}, {
 			xtype: 'button',
 			id: 'searchBtn',
-			text: '서비스 제공기관 검색'
+			text: '서비스 제공기관 검색',
+			width: '200px'
 		}, {
 			xtype: 'button',
 			id: 'relativeSiteBtn',
-			text: '관련 사이트 안내'
+			text: '관련 사이트 안내',
+			width: '200px'
 		}, {
 			xtype: 'button',
 			id: 'settingsBtn',
-			text: '설정'
+			text: '설정',
+			width: '200px'
 		}]
 	}
 });

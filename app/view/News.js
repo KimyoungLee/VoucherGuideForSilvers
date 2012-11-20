@@ -12,6 +12,7 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 
 	config: {
 		title: '종합뉴스',
+		styleHtmlContent: true,
 		scrollable: true,
 
 		layout : {
@@ -22,6 +23,7 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 			xtype: 'titlebar',
 			title: '종합뉴스',
 			docked: 'top',
+			id: 'newsTitlebar',
 			items: [{
 				xtype: 'button',
 				hidden: true,
@@ -49,7 +51,7 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 			id: 'newsListView',
 			padding: '12px',
 			tpl: [
-				'<div>{title}</div>',
+				'<div style="text-align:center;font-weight:bold;font-size:15px;">{title}</div><br />',
 				'<div>{content}</div>'
 			],
 			scrollable: true
