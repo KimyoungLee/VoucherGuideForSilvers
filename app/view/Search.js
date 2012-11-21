@@ -26,6 +26,12 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 				hidden: true,
 				ui: 'back',
 				text: 'Back'
+			}, {
+				xtype: 'button',
+				id: 'searchListBackBtn',
+				hidden: true,
+				ui: 'back',
+				text: 'Back'
 			}]
 		},{
 			xtype: 'panel',
@@ -62,13 +68,59 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 			xtype: 'list',
 			id: 'searchOrganizationList',
 			hidden: true,
-			padding: '12px',
+			padding: '5px',
 			store: 'organizationStore',
 			emptyText: '검색된 내용이 없습니다.',
 			itemTpl: [
 				'<div>{name}</div>',
 				'<div>{addr}</div>'
 			]
+		}, {
+			xtype: 'panel',
+			id: 'searchOrganizationListView',
+			hidden: true,
+			padding: '5px',
+			tpl: [
+				'<table width="100%" cellpadding="0" cellspacing="0" border="0">',
+				'<tr>',
+				'	<th colspan="2">{name}</th>',
+				'</tr>',
+				'<tr>',
+				'	<td class="first">대표자명</td>',
+				'	<td>{delegator}</td>',
+				'</tr>',
+				'<tr>',
+				'	<td class="first">연락처</td>',
+				'	<td>{tel}</td>',
+				'</tr>',
+				'<tr>',
+				'	<td class="first">주소</td>',
+				'	<td>{post_no}<br />{addr}</td>',
+				'</tr>',
+				'<tr>',
+				'	<td class="first">담당자명</td>',
+				'	<td>{manager_name}</td>',
+				'</tr>',
+				'<tr>',
+				'	<td class="first">담당자 연락처</td>',
+				'	<td>{manager_tel}</td>',
+				'</tr>',
+				'<tr>',
+				'	<td class="first">담당자 이메일</td>',
+				'	<td>{manager_email}</td>',
+				'</tr>',
+				'<tr>',
+				'	<td class="first">홈페이지</td>',
+				'	<td>{homepage}</td>',
+				'</tr>',
+				'<tr>',
+				'	<td class="first">기관소개</td>',
+				'	<td>{introduce}</td>',
+				'</tr>',
+				'</table>'
+			],
+			styleHtmlContent: true,
+			scrollable: true
 		}]
 	}
 });

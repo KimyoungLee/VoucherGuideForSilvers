@@ -52,6 +52,7 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 				'<div style="text-align:center;font-weight:bold;font-size:15px;">{title}</div><br />',
 				'<div>{content}</div>'
 			],
+			styleHtmlContent: true,
 			scrollable: true
 		}]
 	}
