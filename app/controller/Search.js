@@ -89,18 +89,25 @@ Ext.define('VoucherGuideForSilvers.controller.Search', {
 			center : new google.maps.LatLng(record.data.lat, record.data.lng),
 			zoom : 18,
 			mapTypeId : google.maps.MapTypeId.ROADMAP,
+			draggable: false,
 			navigationControl: true,
 			navigationControlOptions: {
 				style: google.maps.NavigationControlStyle.DEFAULT
-			},
-			masked: true
+			}
+		});
+		
+		var infowindow = new google.maps.InfoWindow({
+			content: record.data.name
 		});
 		
 		var marker = new google.maps.Marker({
-			position: new google.maps.LatLng(record.data.lat, record.data.lng),
+			position: this.getMapPanel().getMap().center,
 			map: this.getMapPanel().getMap(),
 			title: record.data.name
 		});
+		
+		infowindow.open(this.getMapPanel().getMap(), marker);
+
 	},
 	
 	// 검색 결과 상세 보기에서 검색 결과 화면으로 전환
