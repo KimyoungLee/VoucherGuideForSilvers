@@ -5,7 +5,8 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 	requires: [
 		'Ext.TitleBar',
 		'Ext.field.Select',
-		'Ext.form.Panel'
+		'Ext.form.Panel',
+		'Ext.Map'
 	],
 	
 	config: {
@@ -80,8 +81,13 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 			id: 'searchOrganizationListView',
 			hidden: true,
 			padding: '5px',
+
 			tpl: [
 				'<table width="100%" cellpadding="0" cellspacing="0" border="0">',
+				'<colgroup>',
+				'	<col width="150" />',
+				'	<col width="" />',
+				'</colgroup>',
 				'<tr>',
 				'	<th colspan="2">{name}</th>',
 				'</tr>',
@@ -117,10 +123,17 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 				'	<td class="first">기관소개</td>',
 				'	<td>{introduce}</td>',
 				'</tr>',
-				'</table>'
+				'</table>',
+				'<br />'
 			],
+			
 			styleHtmlContent: true,
-			scrollable: true
+			scrollable: true,
+			items: [{
+				xtype: 'map',
+				id: 'mapPanel',
+				height: '300px'
+			}]
 		}]
 	}
 });
