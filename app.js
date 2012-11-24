@@ -27,7 +27,6 @@ Ext.application({
 		'News',
 		'Search',
 		'Info',
-		'Setting'
 	],
 	
 	models: [
