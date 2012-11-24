@@ -2,7 +2,12 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 	extend: 'Ext.Panel',
 	xtype: 'settingsPanel',
 	
-	requires: ['Ext.TitleBar', 'Ext.field.Slider', 'Ext.field.Select', 'Ext.field.Number'],
+	requires: [
+		'Ext.TitleBar',
+		'Ext.field.Slider',
+		'Ext.field.Select',
+		'Ext.field.Number'
+	],
 	
 	config: {
 		title: '설정',
