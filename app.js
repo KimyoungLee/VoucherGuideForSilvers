@@ -26,7 +26,8 @@ Ext.application({
 		'MainNavController',
 		'News',
 		'Search',
-		'Info'
+		'Info',
+		'Setting'
 	],
 	
 	models: [

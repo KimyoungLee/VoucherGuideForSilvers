@@ -32,9 +32,11 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 				name: 'fontSize',
 				label: '글자 크기',
 				id: 'fontSize',
+				cls:'fontSizeCls',
 				value: 15,
 	            minValue: 6,
-	            maxValue: 72
+	            maxValue: 32,
+	            increment: 1
 			},
 //			//TODO: 이거 텍스트입력창으로교체해야됨.
 //			{
