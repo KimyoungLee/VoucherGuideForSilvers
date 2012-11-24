@@ -5,7 +5,8 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 	requires: [
 		'Ext.TitleBar',
 		'Ext.field.Select',
-		'Ext.form.Panel'
+		'Ext.form.Panel',
+		'Ext.Map'
 	],
 	
 	config: {
@@ -14,6 +15,7 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 		layout: {
 			type: 'card'
 		},
+		fullscreen : true,
 		
 		items: [{
 			xtype: 'titlebar',
@@ -79,48 +81,62 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 			xtype: 'panel',
 			id: 'searchOrganizationListView',
 			hidden: true,
-			padding: '5px',
-			tpl: [
-				'<table width="100%" cellpadding="0" cellspacing="0" border="0">',
-				'<tr>',
-				'	<th colspan="2">{name}</th>',
-				'</tr>',
-				'<tr>',
-				'	<td class="first">대표자명</td>',
-				'	<td>{delegator}</td>',
-				'</tr>',
-				'<tr>',
-				'	<td class="first">연락처</td>',
-				'	<td>{tel}</td>',
-				'</tr>',
-				'<tr>',
-				'	<td class="first">주소</td>',
-				'	<td>{post_no}<br />{addr}</td>',
-				'</tr>',
-				'<tr>',
-				'	<td class="first">담당자명</td>',
-				'	<td>{manager_name}</td>',
-				'</tr>',
-				'<tr>',
-				'	<td class="first">담당자 연락처</td>',
-				'	<td>{manager_tel}</td>',
-				'</tr>',
-				'<tr>',
-				'	<td class="first">담당자 이메일</td>',
-				'	<td>{manager_email}</td>',
-				'</tr>',
-				'<tr>',
-				'	<td class="first">홈페이지</td>',
-				'	<td>{homepage}</td>',
-				'</tr>',
-				'<tr>',
-				'	<td class="first">기관소개</td>',
-				'	<td>{introduce}</td>',
-				'</tr>',
-				'</table>'
-			],
+
 			styleHtmlContent: true,
-			scrollable: true
+			scrollable: true,
+			items: [{
+				xtype: 'panel',
+				id: 'searchOrganizationListViewAll',
+				tpl: [
+					'<table width="100%" cellpadding="0" cellspacing="0" border="0">',
+					'<colgroup>',
+					'	<col width="150" />',
+					'	<col width="" />',
+					'</colgroup>',
+					'<tr>',
+					'	<th colspan="2">{name}</th>',
+					'</tr>',
+					'<tr>',
+					'	<td class="first">대표자명</td>',
+					'	<td>{delegator}</td>',
+					'</tr>',
+					'<tr>',
+					'	<td class="first">연락처</td>',
+					'	<td>{tel}</td>',
+					'</tr>',
+					'<tr>',
+					'	<td class="first">주소</td>',
+					'	<td>{addr}</td>',
+					'</tr>',
+					'<tr>',
+					'	<td class="first">담당자명</td>',
+					'	<td>{manager_name}</td>',
+					'</tr>',
+					'<tr>',
+					'	<td class="first">담당자 연락처</td>',
+					'	<td>{manager_tel}</td>',
+					'</tr>',
+					'<tr>',
+					'	<td class="first">담당자 이메일</td>',
+					'	<td>{manager_email}</td>',
+					'</tr>',
+					'<tr>',
+					'	<td class="first">홈페이지</td>',
+					'	<td>{homepage}</td>',
+					'</tr>',
+					'<tr>',
+					'	<td class="first">기관소개</td>',
+					'	<td>{introduce}</td>',
+					'</tr>',
+					'</table>',
+					'<br />'
+				]
+			}, {
+				xtype: 'map',
+				id: 'mapPanel',
+				height: '300px',
+				style: 'border: solid 1px #e0e0e0;'
+			}]
 		}]
 	}
 });

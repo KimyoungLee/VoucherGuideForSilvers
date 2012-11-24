@@ -24,7 +24,9 @@ Ext.define('VoucherGuideForSilvers.controller.Search', {
 			searchBackBtn: '#searchBackBtn',
 			searchListBackBtn: '#searchListBackBtn',
 			searchTitlebar: '#searchTitlebar',
-			searchFormPanel: '#searchFormPanel'
+			searchFormPanel: '#searchFormPanel',
+			mapPanel: '#mapPanel',
+			searchOrganizationListViewAll: '#searchOrganizationListViewAll'
 		}
 	},
 	
@@ -82,7 +84,31 @@ Ext.define('VoucherGuideForSilvers.controller.Search', {
 			direction: 'left'
 		});
 		
-		this.getSearchOrganizationListView().setData(record.data);
+		//this.getSearchOrganizationListView().setData(record.data);
+		this.getSearchOrganizationListViewAll().setData(record.data);
+
+		this.getMapPanel().setMapOptions({
+			center : new google.maps.LatLng(record.data.lat, record.data.lng),
+			zoom : 15,
+			mapTypeId : google.maps.MapTypeId.ROADMAP,
+			draggable: false,
+			navigationControl: true,
+			navigationControlOptions: {
+				style: google.maps.NavigationControlStyle.DEFAULT
+			}
+		});
+		
+		//var infowindow = new google.maps.InfoWindow({
+		//	content: record.data.name
+		//});
+		
+		var marker = new google.maps.Marker({
+			position: this.getMapPanel().getMap().center,
+			map: this.getMapPanel().getMap(),
+			title: record.data.name
+		});
+		
+		//infowindow.open(this.getMapPanel().getMap(), marker);
 	},
 	
 	// 검색 결과 상세 보기에서 검색 결과 화면으로 전환

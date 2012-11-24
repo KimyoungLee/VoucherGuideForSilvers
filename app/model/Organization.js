@@ -32,6 +32,12 @@ Ext.define('VoucherGuideForSilvers.model.Organization', {
 		}, {
 			name: 'introduce',
 			type: 'string'
+		}, {
+			name: 'lng',
+			type: 'string'
+		}, {
+			name: 'lat',
+			type: 'string'
 		}]
 	}
 });
