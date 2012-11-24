@@ -35,7 +35,8 @@ Ext.application({
 		'Sido',
 		'Gugun',
 		'Organization',
-		'Info'
+		'Info',
+		'Site'
 	],
 	
 	stores: [
@@ -43,7 +44,8 @@ Ext.application({
 		'Sido',
 		'Gugun',
 		'Organization',
-		'Info'
+		'Info',
+		'Site'
 	],
 
     icon: {
