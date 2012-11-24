@@ -25,7 +25,7 @@ Ext.define('VoucherGuideForSilvers.controller.Info', {
 			direction: 'left'
 		});
 		this.getInfoBackBtn().show();
-		this.getInfoTitleBar().setTitle(record.get('title'));
+		this.getInfoTitleBar().setTitle('서비스 안내'); //record.get('title'));
 		this.getInfoListView().setData(record.data);
 	},
 	
