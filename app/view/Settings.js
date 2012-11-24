@@ -2,7 +2,7 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 	extend: 'Ext.Panel',
 	xtype: 'settingsPanel',
 	
-	requires: ['Ext.TitleBar', 'Ext.field.Slider', 'Ext.field.Select'],
+	requires: ['Ext.TitleBar', 'Ext.field.Slider', 'Ext.field.Select', 'Ext.field.Number'],
 	
 	config: {
 		title: '설정',
@@ -27,9 +27,11 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 				name: 'fontSize',
 				label: '글자 크기',
 				id: 'fontSize',
+				cls:'fontSizeCls',
 				value: 15,
 	            minValue: 6,
-	            maxValue: 72
+	            maxValue: 32,
+	            increment: 1
 			},
 //			//TODO: 이거 텍스트입력창으로교체해야됨.
 //			{
