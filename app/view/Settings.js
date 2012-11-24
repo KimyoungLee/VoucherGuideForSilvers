@@ -49,25 +49,29 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 //				//valueField: 'sido',
 //				placeHolder: '주소 입력'
 //			},
-			{
-                xtype: 'textfield',
-                name: 'name',
-                label: '주소',
-                placeHolder: '주소 입력',
-                autoCapitalize: false
-            },
+//			{
+//                xtype: 'textfield',
+//                name: 'name',
+//                label: '주소',
+//                placeHolder: '주소 입력',
+//                autoCapitalize: false
+//            },
 			//상담 전화번호
 			{
                 xtype: 'numberfield',
-                name: 'number',
+                id: 'counselPhoneNumber',
+                name: 'counselPhoneNumber',
                 label: '상담 전화번호',
+                maxLength: 15,
                 placeHolder: '전화번호 입력'
             },
             //응급 전화번호	
             {
                 xtype: 'numberfield',
-                name: 'number',
+                id: 'emergencyPhoneNumber',
+                name: 'emergencyPhoneNumber',
                 label: '응급 전화번호',
+                maxLength: 15,
                 placeHolder: '전화번호 입력'
             },
             {
