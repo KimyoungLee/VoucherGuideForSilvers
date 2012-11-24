@@ -27,6 +27,7 @@ Ext.application({
 		'News',
 		'Search',
 		'Settings'
+		'Info',
 	],
 	
 	models: [
@@ -34,7 +35,8 @@ Ext.application({
 		'Sido',
 		'Gugun',
 		'Organization',
-		'Info'
+		'Info',
+		'Site'
 	],
 	
 	stores: [
@@ -42,7 +44,8 @@ Ext.application({
 		'Sido',
 		'Gugun',
 		'Organization',
-		'Info'
+		'Info',
+		'Site'
 	],
 
     icon: {

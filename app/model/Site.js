@@ -1,14 +1,14 @@
-Ext.define('VoucherGuideForSilvers.model.Info', {
+Ext.define('VoucherGuideForSilvers.model.Site', {
 	extend: 'Ext.data.Model',
 
 	config: {
 		fields: [
 			{
-				name: 'title',
+				name: 'info',
 				type: 'string'
 			},
 			{
-				name: 'content',
+				name: 'url',
 				type: 'string'
 			}
 		]
