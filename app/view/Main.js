@@ -9,7 +9,8 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 			xtype: 'homePanel'
 		}, {
 			title: '긴급통화',
-			iconCls: 'phone1'
+			iconCls: 'phone1',
+			id:'call119'
 		}, {
 			title: '상담통화',
 			iconCls: 'phone1'
