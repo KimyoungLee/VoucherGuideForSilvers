@@ -37,20 +37,26 @@ Ext.define('VoucherGuideForSilvers.controller.Settings', {
     	if(window.localStorage)
 		{
     		//window.localStorage.clear();		
-    		widnow.localStorage.setItem('counselPhoneNumber', newValue);
+    		window.localStorage.setItem('counselPhoneNumber', newValue);
 		}
-    	var settings = Ext.create('VoucherGuideForSilvers.model.Settings', {
-    		counselPhoneNumber:newValue
-    	});
     	
+//    	var settings = Ext.create('VoucherGuideForSilvers.model.Settings', {
+//    		counselPhoneNumber:newValue
+//    	});
+//    	this.setRecord(settings);
     	//settingsPanel.setRecord(settings);
     },
     
     onEmergencyPhoneNumberChange: function( textField, newValue, oldValue, eOpts ) {
-    	var settings = Ext.create('VoucherGuideForSilvers.model.Settings', {
-    		emergencyPhoneNumber:newValue
-    	});
-    	
-    	//settingsPanel.setRecord(settings);    	
+    	if(window.localStorage)
+		{
+    		//window.localStorage.clear();		
+    		window.localStorage.setItem('emergencyPhoneNumber', newValue);
+		}    	
+//    	var settings = Ext.create('VoucherGuideForSilvers.model.Settings', {
+//    		emergencyPhoneNumber:newValue
+//    	});
+//    	this.setRecord(settings);
+//    	//settingsPanel.setRecord(settings);    	
     }
 });

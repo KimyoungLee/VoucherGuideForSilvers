@@ -6,15 +6,20 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 		'Ext.TitleBar',
 		'Ext.field.Slider',
 		'Ext.field.Select',
-		'Ext.field.Number'
+		'Ext.data.Store',
+		'Ext.field.Number',
+		'Ext.form.FieldSet'
 	],
 	
 	config: {
 		title: '설정',
 		iconCls: 'settings',
-		
+		styleHtmlContent: true,
+		scrollable: true,
+
 		layout: {
-			type: 'card',
+			type: 'vbox',
+			align: 'middle',
 		},
 		
 		items: [{
@@ -22,69 +27,114 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 			title: '설정',
 			docked: 'top'
 		},
+		
 		{
 			xtype: 'panel',
 			id: 'configFormPanel',
-			flex: 1,
+			layout: 'fit',
+			//flex: 1,
 			items: [
-			{
-				xtype: 'sliderfield',
-				name: 'fontSize',
-				label: '글자 크기',
-				id: 'fontSize',
-				cls:'fontSizeCls',
-				value: 15,
-	            minValue: 6,
-	            maxValue: 32,
-	            increment: 1
-			},
-//			//TODO: 이거 텍스트입력창으로교체해야됨.
-//			{
-//				xtype: 'selectfield',
-//				//name: 'address',
-//				//id: 'addressSelect',
-//				label: '주소',
-//				//store: 'sidoStore',
-//				//displayField: 'sido',
-//				//valueField: 'sido',
-//				placeHolder: '주소 입력'
-//			},
-//			{
-//                xtype: 'textfield',
-//                name: 'name',
-//                label: '주소',
-//                placeHolder: '주소 입력',
-//                autoCapitalize: false
-//            },
-			//상담 전화번호
-			{
-                xtype: 'numberfield',
-                id: 'counselPhoneNumber',
-                name: 'counselPhoneNumber',
-                label: '상담 전화번호',
-                maxLength: 15,
-                placeHolder: '전화번호 입력'
-            },
-            //응급 전화번호	
-            {
-                xtype: 'numberfield',
-                id: 'emergencyPhoneNumber',
-                name: 'emergencyPhoneNumber',
-                label: '응급 전화번호',
-                maxLength: 15,
-                placeHolder: '전화번호 입력'
-            },
-            {
-            	xtype: 'button',
-            	text: '완료',
-            	id: 'settingConfirmationBtn',
-            	ui: 'confirm',
-            	//iconCls: 'settings',
-            	iconMask: true,
-            	margin: '15px'
-            }
-			]
-		}
-		]
+	        {
+	        	xtype:'fieldset', 
+	        	title:'환경설정',
+	        	instructions: '적당한 크기를 선택하세요.',
+	        	items: [
+	              			{
+	            				xtype: 'sliderfield',
+	            				name: 'fontSize',
+	            				label: '글자 크기',
+	            				id: 'fontSize',
+	            				cls:'fontSizeCls',
+	            				store: 'settingsStore',
+	            				//value: 15,
+	            				//value: '{textFontSize}',
+	            				tpl: '{textFontSize}',
+	            	            minValue: 6,
+	            	            maxValue: 32,
+	            	            increment: 1
+	            			}
+	            			]
+	            		},
+	            		{
+	            			xtype:'fieldset', 
+	        	        	title:'전화번호',
+	        	        	instructions: '번호를 입력하시면 하단 탭바에서 전화 바로 걸기가 동작합니다.',
+	        	        	items: [
+	    	            			//상담 전화번호
+	    	            			{
+	    	            				xtype: 'textfield',
+//	    	        	                            xtype: 'numberfield',
+	    	                            id: 'counselPhoneNumber',
+	    	                            name: 'counselPhoneNumber',
+	    	                            store: 'settingsStore',
+	    	                            label: '상담 전화번호',
+	    	                            tpl: '{counselPhoneNumber}',
+		    	                        listeners: {
+		    	                        	painted: function(textfield, eOpts){
+		    	                        		console.log(textfield + ' test ' +eOpts);
+		    	                        		//Ext.getCmp('counselPhoneNumber').getValue();
+		    	                        		//textfield.setValue('ggman');
+		    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.counselPhoneNumber;
+		    	                        		
+		    	                        		Ext.getCmp('counselPhoneNumber').setValue(itemName);
+		    	                        	}
+		    	                        },
+		    	                            	
+	    	                            //value: ['{settingsStore}'],
+	    	                            //value: '{counselPhoneNumber}',
+		    	                        
+	    	                            //tpl: '{counselPhoneNumber}',
+	    	                            //tpl: ['{counselPhoneNumber}'],
+	    	                            //tpl: '<div>abc</div>',
+	    	                            //tpl: 'Testing: {counselPhoneNumber}',
+	    	                            //tpl: 'Testing: {value}',
+	    	                            data: {
+	    	                                //value: 'my test value'
+	    	                            	value: 'counselPhoneNumber'
+	    	                            },
+//	    	        	                            autoComplete: true,
+//	    	        	                            autoCorrect: true,
+	    	                            maxLength: 15,
+	    	                            placeHolder: '전화번호 입력'
+	    	                        },
+	    	                        //응급 전화번호	
+	    	                        {
+	    	                        	xtype: 'textfield',
+//	    	        	                          xtype: 'numberfield',
+	    	                            id: 'emergencyPhoneNumber',
+	    	                            //name: 'emergencyPhoneNumber',
+	    	                            store: 'settingsStore',
+	    	                            label: '응급 전화번호',
+	    	                            value: 'gg',
+	    	                            maxLength: 15,
+	    	                            tpl: [
+	    	              					//'<div style="text-align:center;font-weight:bold;font-size:15px;">{contactPhoneNumber}</div><br />',
+	    	              					'<div>{contactPhoneNumber}</div>'
+	    	              				],
+	    	                            placeHolder: '전화번호 입력'
+	    	                        }
+	    	            			]
+	            		},
+	            		{
+	            			xtype: 'panel',
+	            			layout: {
+	            				type: 'hbox',
+	            				align: 'middle',
+	            				pack: 'center'
+	            			},
+	            			
+	            			items:[
+									{
+										xtype: 'button',
+										text: '완료',
+										id: 'settingConfirmationBtn',
+										ui: 'confirm',
+										width: 200,
+										height: 40
+									}
+        			       ]
+	            		}
+                ]
+	        }]
 	}
 });

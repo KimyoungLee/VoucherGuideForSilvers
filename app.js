@@ -35,6 +35,7 @@ Ext.application({
 		'Sido',
 		'Gugun',
 		'Organization',
+		'Settings',
 		'Info'
 	],
 	
@@ -43,6 +44,7 @@ Ext.application({
 		'Sido',
 		'Gugun',
 		'Organization',
+		'Settings',
 		'Info'
 	],
 

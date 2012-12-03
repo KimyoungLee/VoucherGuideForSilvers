@@ -3,10 +3,23 @@ Ext.define('VoucherGuideForSilvers.model.Settings', {
 
 	config: {
 		fields: [
-		         { name: 'textFontSize', type: 'int'},
+		         //'textFontSize', 'contactPhoneNumber', 'emergencyPhoneNumber' 
+		         //*
+		         {
+		        	 name: 'textFontSize',
+		        	 type: 'int'
+        		 },
 		         //{ name: 'configAd', type: 'int'},
-		         { name: 'contactPhoneNumber', type: 'string'},
-		         { name: 'emergencyPhoneNumber', type: 'string'}       
+		         { 
+        			 name: 'counselPhoneNumber', 
+        			 type: 'string'
+				 },
+		         { 
+					 name: 'emergencyPhoneNumber', 
+					 type: 'string'
+				 } 
+				 //*/      
 		]
+		
 	}
 });
