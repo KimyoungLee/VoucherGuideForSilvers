@@ -12,6 +12,8 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 			iconCls: 'phone1',
 			id:'call119'
 		}, {
+			xtype: 'searchPanel',
+		}, {
 			title: '상담통화',
 			iconCls: 'phone1'
 		}, {
@@ -21,9 +23,6 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 			hidden: true
 		}, {
 			xtype: 'infoListPanel',
-			hidden: true
-		}, {
-			xtype: 'searchPanel',
 			hidden: true
 		}, {
 			xtype: 'relativeSitePanel',

@@ -10,13 +10,13 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 	],
 	
 	config: {
-		title: '서비스 제공기관 검색',
+		title: '검색',
+		iconCls: 'search',
 		
 		layout: {
 			type: 'card'
 		},
-		fullscreen : true,
-		
+
 		items: [{
 			xtype: 'titlebar',
 			title: '서비스 제공 기관 검색',
