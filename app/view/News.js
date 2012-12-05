@@ -20,7 +20,6 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 		items: [{
 			xtype: 'titlebar',
 			title: '종합뉴스',
-			style: 'font-weight: bold',
 			docked: 'top',
 			id: 'newsTitlebar',
 			items: [{
@@ -34,10 +33,11 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 			xtype: 'list',
 			id: 'newsList',
 			store: 'newsStore',
+			layout:'fit',
 			flex : 1,
 			loadingText: '불러오는 중...',
 			emptyText: '등록된 내용이 없습니다.',
-
+			
 			plugins:[{
 				xclass: 'Ext.plugin.ListPaging',
 				loadMoreText : '더 보기',
@@ -45,17 +45,22 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 				autoPaging : true
 			}],
 
-			itemTpl: '<div style="border-bottom:dashed 2px #C9C8C8;">{title}</div>'
+			itemTpl: '<div>{title}</div>'
 		}, {
 			xtype: 'panel',
 			id: 'newsListView',
-			padding: '12px',
-			tpl: [
-				'<div style="text-align:center;font-weight:bold;font-size:15px;">{title}</div><br />',
-				'<div">{content}</div>'
-			],
-			styleHtmlContent: true,
-			scrollable: true
+			
+			scrollable: true,
+
+			items: [{
+				xtype: 'titlebar',
+				id: 'newsListViewTitle',
+				ui: 'title'
+			}, {
+				xtype: 'panel',
+				id: 'newsListViewContent',
+				tpl: '<div class="content">{content}</div>'
+			}]
 		}]
 	}
 });
