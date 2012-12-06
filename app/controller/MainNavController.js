@@ -13,16 +13,13 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 				tap: 'onSearchBtnTap'
 			}, relativeSiteBtn: {
 				tap: 'onrRlativeSiteBtnTap'
-			}, call119Btn : {
-				tap: 'onCall119BtnTap'
 			}
 		}, refs : {
 			settingsBtn: '#settingsBtn',
 			newsListBtn: '#newsListBtn',
 			infoListBtn: '#infoListBtn',
 			searchBtn: '#searchBtn',
-			relativeSiteBtn: '#relativeSiteBtn',
-			call199Btn: '#call119'
+			relativeSiteBtn: '#relativeSiteBtn'
 		}
 	},
 	
@@ -59,16 +56,5 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 			type: 'slide',
 			direction: 'left'
 		});
-	},
-	
-	onCall119BtnTap: function(button, e, options){
-		
-		location.href = 'tel:010-3848-4697'; 
-		/*
-		button.up('main').animateActiveItem('homePanel', {
-			type: 'slide',
-			direction: 'left'
-		});
-		*/
 	}
 });

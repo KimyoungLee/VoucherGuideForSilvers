@@ -10,7 +10,19 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 		}, {
 			title: '긴급통화',
 			iconCls: 'phone1',
-			id:'call119'
+			id:'call119Btn',
+			listeners : {
+				activate : function(panel, newActiveItem, oldActiveItem, eOpts ){
+					console.log('tel');
+					document.location.href = 'tel:010-3848-4697';
+					panel.animateActiveItem('homePanel', {
+						type: 'slide',
+						direction: 'left'
+					});
+					console.log('tel end');
+				}
+			}
+				
 		}, {
 			xtype: 'searchPanel',
 		}, {
