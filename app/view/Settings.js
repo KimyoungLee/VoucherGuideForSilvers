@@ -46,9 +46,12 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 	            				id: 'fontSize',
 	            				cls:'fontSizeCls',
 	            				store: 'settingsStore',
-	            				//value: 15,
-	            				//value: '{textFontSize}',
-	            				tpl: '{textFontSize}',
+	            				listeners: {
+    	                        	painted: function(textfield, eOpts){
+    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.textFontSize;
+    	                        		Ext.getCmp('fontSize').setValue(itemName);
+    	                        	}
+    	                        },
 	            	            minValue: 6,
 	            	            maxValue: 32,
 	            	            increment: 1
@@ -68,32 +71,12 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 	    	                            name: 'counselPhoneNumber',
 	    	                            store: 'settingsStore',
 	    	                            label: '상담 전화번호',
-	    	                            tpl: '{counselPhoneNumber}',
 		    	                        listeners: {
 		    	                        	painted: function(textfield, eOpts){
-		    	                        		console.log(textfield + ' test ' +eOpts);
-		    	                        		//Ext.getCmp('counselPhoneNumber').getValue();
-		    	                        		//textfield.setValue('ggman');
 		    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.counselPhoneNumber;
-		    	                        		
 		    	                        		Ext.getCmp('counselPhoneNumber').setValue(itemName);
 		    	                        	}
 		    	                        },
-		    	                            	
-	    	                            //value: ['{settingsStore}'],
-	    	                            //value: '{counselPhoneNumber}',
-		    	                        
-	    	                            //tpl: '{counselPhoneNumber}',
-	    	                            //tpl: ['{counselPhoneNumber}'],
-	    	                            //tpl: '<div>abc</div>',
-	    	                            //tpl: 'Testing: {counselPhoneNumber}',
-	    	                            //tpl: 'Testing: {value}',
-	    	                            data: {
-	    	                                //value: 'my test value'
-	    	                            	value: 'counselPhoneNumber'
-	    	                            },
-//	    	        	                            autoComplete: true,
-//	    	        	                            autoCorrect: true,
 	    	                            maxLength: 15,
 	    	                            placeHolder: '전화번호 입력'
 	    	                        },
@@ -102,15 +85,15 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 	    	                        	xtype: 'textfield',
 //	    	        	                          xtype: 'numberfield',
 	    	                            id: 'emergencyPhoneNumber',
-	    	                            //name: 'emergencyPhoneNumber',
 	    	                            store: 'settingsStore',
 	    	                            label: '응급 전화번호',
-	    	                            value: 'gg',
+	    	                            listeners: {
+		    	                        	painted: function(textfield, eOpts){
+		    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.emergencyPhoneNumber;
+		    	                        		Ext.getCmp('emergencyPhoneNumber').setValue(itemName);
+		    	                        	}
+		    	                        },
 	    	                            maxLength: 15,
-	    	                            tpl: [
-	    	              					//'<div style="text-align:center;font-weight:bold;font-size:15px;">{contactPhoneNumber}</div><br />',
-	    	              					'<div>{contactPhoneNumber}</div>'
-	    	              				],
 	    	                            placeHolder: '전화번호 입력'
 	    	                        }
 	    	            			]
