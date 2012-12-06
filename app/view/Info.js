@@ -26,10 +26,14 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 					id: 'infoBackBtn',
 					ui: 'back',
 					text: 'Back'
-				}]
+				}
+				]
 			}, 
 			{
 				xtype:'carousel',
+				style:{
+					'border':'3px solid red'
+				},
 	        	items:[
 			        {
 			        	xtype: 'panel',
@@ -53,6 +57,7 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 			        }
 			    ]
 			}
+
 		]
 	}
 });
