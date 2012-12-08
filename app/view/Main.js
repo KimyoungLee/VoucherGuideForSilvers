@@ -7,6 +7,13 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 		
 		items: [{
 			xtype: 'homePanel'
+				, listeners: {
+                	painted: function(textfield, eOpts){
+                		if(localStorage.fontSize)
+    						for (var i = 0; i < document.getElementsByTagName("span").length; i++)
+    				        	document.getElementsByTagName("span").item(i).style.fontSize = localStorage.fontSize + 'px';
+                	}
+				}
 		}, {
 			title: '긴급통화',
 			iconCls: 'phone1',
@@ -21,11 +28,6 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 						direction: 'left'
 					});
 					console.log('tel end');
-					
-					if(localStorage.fontSize)
-						for (var i = 0; i < document.getElementsByTagName("span").length; i++)
-				        	document.getElementsByTagName("span").item(i).style.fontSize = localStorage.fontSize + 'px';
-					
 				}
 			}
 		}, {

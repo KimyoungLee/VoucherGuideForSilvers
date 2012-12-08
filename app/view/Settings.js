@@ -50,6 +50,8 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
     	                        	painted: function(textfield, eOpts){
     	                        		if(localStorage.fontSize)
     	                        			Ext.getCmp('fontSize').setValue(localStorage.fontSize);
+    	                        		else 
+    	                        			Ext.getCmp('fontSize').setValue(16);
 //    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.textFontSize;
 //    	                        		Ext.getCmp('fontSize').setValue(itemName);
     	                        	}
