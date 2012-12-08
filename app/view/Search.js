@@ -118,7 +118,7 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 					'</tr>',
 					'<tr>',
 					'	<td class="first">연락처</td>',
-					'	<td>{tel}</td>',
+					'	<td><a href="tel:{tel}" target="_blank">{tel}</a></td>',
 					'</tr>',
 					'<tr>',
 					'	<td class="first">주소</td>',
