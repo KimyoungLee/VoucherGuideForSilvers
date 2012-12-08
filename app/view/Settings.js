@@ -48,8 +48,10 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 	            				store: 'settingsStore',
 	            				listeners: {
     	                        	painted: function(textfield, eOpts){
-    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.textFontSize;
-    	                        		Ext.getCmp('fontSize').setValue(itemName);
+    	                        		if(localStorage.fontSize)
+    	                        			Ext.getCmp('fontSize').setValue(localStorage.fontSize);
+//    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.textFontSize;
+//    	                        		Ext.getCmp('fontSize').setValue(itemName);
     	                        	}
     	                        },
 	            	            minValue: 6,
@@ -73,8 +75,11 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 	    	                            label: '상담 전화번호',
 		    	                        listeners: {
 		    	                        	painted: function(textfield, eOpts){
-		    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.counselPhoneNumber;
-		    	                        		Ext.getCmp('counselPhoneNumber').setValue(itemName);
+		    	                        		if(localStorage.counselPhoneNumber)
+		    	                        			Ext.getCmp('counselPhoneNumber').setValue(localStorage.counselPhoneNumber);
+		    	                        		
+//		    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.counselPhoneNumber;
+//		    	                        		Ext.getCmp('counselPhoneNumber').setValue(itemName);
 		    	                        	}
 		    	                        },
 	    	                            maxLength: 15,
@@ -89,8 +94,10 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 	    	                            label: '응급 전화번호',
 	    	                            listeners: {
 		    	                        	painted: function(textfield, eOpts){
-		    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.emergencyPhoneNumber;
-		    	                        		Ext.getCmp('emergencyPhoneNumber').setValue(itemName);
+		    	                        		if(localStorage.emergencyPhoneNumber)
+		    	                        			Ext.getCmp('emergencyPhoneNumber').setValue(localStorage.emergencyPhoneNumber);
+//		    	                        		var itemName = Ext.getStore('settingsStore').data.getAt(0).data.emergencyPhoneNumber;
+//		    	                        		Ext.getCmp('emergencyPhoneNumber').setValue(itemName);
 		    	                        	}
 		    	                        },
 	    	                            maxLength: 15,

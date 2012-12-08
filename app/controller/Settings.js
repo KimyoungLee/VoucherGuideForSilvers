@@ -31,13 +31,22 @@ Ext.define('VoucherGuideForSilvers.controller.Settings', {
         //document.getElementById('fontSize').getElementsByTagName("span").item(0).style.fontSize = newValue + 'px';
         for (var i = 0; i < document.getElementsByTagName("span").length; i++)
         	document.getElementsByTagName("span").item(i).style.fontSize = newValue + 'px';
+        
+        if(window.localStorage)
+		{
+    		console.log('save onFontSizeChange');
+    		//window.localStorage.clear();		
+    		window.localStorage.setItem('fontSize', newValue);
+		}
     },
 
     onCounselPhoneNumberChange: function( textField, newValue, oldValue, eOpts ) {
     	if(window.localStorage)
 		{
+    		console.log('save onCounselPhoneNumberChange');
     		//window.localStorage.clear();		
     		window.localStorage.setItem('counselPhoneNumber', newValue);
+    		//window.localStorage.setItem('counselPhoneNumber', newValue);
 		}
     	
 //    	var settings = Ext.create('VoucherGuideForSilvers.model.Settings', {
@@ -50,6 +59,7 @@ Ext.define('VoucherGuideForSilvers.controller.Settings', {
     onEmergencyPhoneNumberChange: function( textField, newValue, oldValue, eOpts ) {
     	if(window.localStorage)
 		{
+    		console.log('save onEmergencyPhoneNumberChange');
     		//window.localStorage.clear();		
     		window.localStorage.setItem('emergencyPhoneNumber', newValue);
 		}    	

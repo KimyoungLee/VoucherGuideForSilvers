@@ -20,6 +20,11 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 						direction: 'left'
 					});
 					console.log('tel end');
+					
+					if(localStorage.fontSize)
+						for (var i = 0; i < document.getElementsByTagName("span").length; i++)
+				        	document.getElementsByTagName("span").item(i).style.fontSize = localStorage.fontSize + 'px';
+					
 				}
 			}
 				
