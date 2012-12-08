@@ -36,7 +36,8 @@ Ext.application({
 		'Gugun',
 		'Organization',
 		'Settings',
-		'Info'
+		'Info',
+		'Site'
 	],
 	
 	stores: [
@@ -45,7 +46,8 @@ Ext.application({
 		'Gugun',
 		'Organization',
 		'Settings',
-		'Info'
+		'Info',
+		'Site'
 	],
 
     icon: {

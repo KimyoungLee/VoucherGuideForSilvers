@@ -14,7 +14,8 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 		iconCls: 'search',
 		
 		layout: {
-			type: 'card'
+			type: 'card',
+			align: 'middle'
 		},
 
 		items: [{
@@ -35,36 +36,51 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 				ui: 'back',
 				text: 'Back'
 			}]
-		},{
+		}, {
 			xtype: 'panel',
 			id: 'searchFormPanel',
 			flex: 1,
+			margin: 20,
 			items: [{
-				xtype: 'selectfield',
-				name: 'sido',
-				id: 'sidoSelect',
-				label: '시/도',
-				store: 'sidoStore',
-				displayField: 'sido',
-				valueField: 'sido',
-				placeHolder: '시/도 선택'
+				xtype: 'fieldset',
+				title: '검색할 지역을 선택하세요.',
+				items: [{
+					xtype: 'selectfield',
+					name: 'sido',
+					id: 'sidoSelect',
+					label: '시/도',
+					store: 'sidoStore',
+					displayField: 'sido',
+					valueField: 'sido',
+					placeHolder: '시/도 선택'
+				}, {
+					xtype: 'selectfield',
+					name: 'gugun',
+					id: 'gugunSelect',
+					label: '구/군',
+					store: 'gugunStore',
+					displayField: 'gugun',
+					valueField: 'gugun',
+					placeHolder: '구/군 선택'
+				}]
 			}, {
-				xtype: 'selectfield',
-				name: 'gugun',
-				id: 'gugunSelect',
-				label: '구/군',
-				store: 'gugunStore',
-				displayField: 'gugun',
-				valueField: 'gugun',
-				placeHolder: '구/군 선택'
-			}, {
-				xtype: 'button',
-				text: '검색',
-				id: 'searchOrganizationBtn',
-				ui: 'confirm',
-				iconCls: 'search',
-				iconMask: true,
-				margin: '15px'
+				xtype: 'panel',
+				layout: {
+					type: 'hbox',
+					align: 'middle',
+					pack: 'center'
+				},
+				
+				items: [{
+					xtype: 'button',
+					text: '검색',
+					id: 'searchOrganizationBtn',
+					ui: 'confirm',
+					iconCls: 'search',
+					iconMask: true,
+					width: 200,
+					height: 40
+				}]
 			}]
 		}, {
 			xtype: 'list',
@@ -102,7 +118,7 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 					'</tr>',
 					'<tr>',
 					'	<td class="first">연락처</td>',
-					'	<td>{tel}</td>',
+					'	<td><a href="tel:{tel}" target="_blank">{tel}</a></td>',
 					'</tr>',
 					'<tr>',
 					'	<td class="first">주소</td>',

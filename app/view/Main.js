@@ -10,6 +10,7 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 		}, {
 			title: '긴급통화',
 			iconCls: 'phone1',
+
 			id:'call119Btn',
 			listeners : {
 				activate : function(panel, newActiveItem, oldActiveItem, eOpts ){
@@ -27,12 +28,12 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 					
 				}
 			}
-				
 		}, {
 			xtype: 'searchPanel',
 		}, {
 			title: '상담통화',
-			iconCls: 'phone1'
+			iconCls: 'phone1',
+			id: 'callCounselBtn'
 		}, {
 			xtype: 'settingsPanel'
 		}, {
