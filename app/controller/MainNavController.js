@@ -13,13 +13,16 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 				tap: 'onSearchBtnTap'
 			}, relativeSiteBtn: {
 				tap: 'onrRlativeSiteBtnTap'
+			}, mainPanel: {
+				activeitemchange: 'onMainPanelActiveItemChange'
 			}
 		}, refs : {
 			settingsBtn: '#settingsBtn',
 			newsListBtn: '#newsListBtn',
 			infoListBtn: '#infoListBtn',
 			searchBtn: '#searchBtn',
-			relativeSiteBtn: '#relativeSiteBtn'
+			relativeSiteBtn: '#relativeSiteBtn',
+			mainPanel: '#mainPanel'
 		}
 	},
 	
@@ -56,5 +59,14 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 			type: 'slide',
 			direction: 'left'
 		});
+	}, 
+	
+	onMainPanelActiveItemChange : function(comp, value, oldValue, eOpts) {
+		if (value._itemId == 'emergencyCallBtn') {
+			// 긴급통화 버튼 선택시
+			var emergencyPhoneNumber = localStorage.emergencyPhoneNumber;
+			if(!localStorage.emergencyPhoneNumber) emergencyPhoneNumber = '119';
+			document.location.href = 'tel:'+ emergencyPhoneNumber;
+		}
 	}
 });

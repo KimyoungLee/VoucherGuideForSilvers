@@ -45,7 +45,7 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 				autoPaging : true
 			}],
 
-			itemTpl: '<div>{title}</div>'
+			itemTpl: '<div id="newsListContent"><span>{title}</span></div>'
 		}, {
 			xtype: 'panel',
 			id: 'newsListView',
@@ -53,13 +53,13 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 			scrollable: true,
 
 			items: [{
-				xtype: 'titlebar',
-				id: 'newsListViewTitle',
-				ui: 'title'
-			}, {
 				xtype: 'panel',
 				id: 'newsListViewContent',
-				tpl: '<div class="content">{content}</div>'
+				tpl: [
+					'<div id="newsContent">',
+					'<h3><span>{title}</span></h3><br />',
+					'<div class="newsContent">{content}</div>'
+				]
 			}]
 		}]
 	}

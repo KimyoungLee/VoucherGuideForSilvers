@@ -5,8 +5,8 @@ Ext.define('VoucherGuideForSilvers.view.Home', {
 	config: {
 		title: '홈',
 		iconCls: 'home',
+		cls: 'mainPanel',
 		
-		styleHtmlContent: true,
 		scrollable: true,
 		
 		layout: {
@@ -17,25 +17,26 @@ Ext.define('VoucherGuideForSilvers.view.Home', {
 		items: [{
 			xtype: 'button',
 			id: 'infoListBtn',
-			text: '서비스안내',
-			width: '200px'
+			baseCls: 'main_button1',
+			text: ''
 		}, {
 			xtype: 'button',
 			id: 'newsListBtn',
-			text: '종합뉴스',
-			width: '200px'
+			baseCls: 'main_button2',
+			text: ''
 		}, {
 			xtype: 'button',
 			id: 'searchBtn',
-			text: '서비스 제공기관 검색',
-			width: '200px'
+			baseCls: 'main_button3',
+			text: ''
 		}, {
 			xtype: 'button',
 			id: 'relativeSiteBtn',
-			text: '관련 사이트 안내',
-			width: '200px'
+			baseCls: 'main_button4',
+			text: ''
 		}, {
 			xtype: 'button',
+			hidden: true,
 			id: 'settingsBtn',
 			text: '설정',
 			width: '200px'

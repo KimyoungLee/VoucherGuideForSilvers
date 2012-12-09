@@ -65,6 +65,12 @@
         {
             "path": "resources/css/app.css",
             "update": "delta"
+        }, {
+        	"path": "resources/css/icon.css",
+        	"update": "delta"
+        }, {
+        	"path": "resources/css/common.css",
+        	"update": "delta"
         }
     ],
 

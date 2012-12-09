@@ -1,0 +1,19 @@
+	
+	table th {
+		text-align: center;
+		border-top: solid 2px #126095;
+		border-bottom: solid 2px #126095;
+		background-color: #1881C9;
+		color: #ffffff;
+	}
+	
+	table td {
+		border-bottom: solid 1px #4285F4;
+		background-color: #FFFFFF;
+	}
+	
+	table td.first {
+		text-align:center;
+		font-weight: bold;
+		background-color: #F7F7F7;
+	}

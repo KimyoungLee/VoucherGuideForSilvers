@@ -5,7 +5,6 @@ Ext.define('VoucherGuideForSilvers.controller.News', {
 		refs: {
 			newsListPanel: 'newsListPanel',
 			newsListView: '#newsListView',
-			newsListViewTitle: '#newsListViewTitle',
 			newsListViewContent: '#newsListViewContent',
 			newsBackBtn: '#newsBackBtn',
 			newsList: '#newsList',
@@ -19,7 +18,7 @@ Ext.define('VoucherGuideForSilvers.controller.News', {
 				tap: 'onNewBackBtnTap'
 			}
 		}
-	},
+	},	
 	
 	onNewsListItemTap : function(dataview, index, target, record, e, options) {
 		this.getNewsListPanel().animateActiveItem(this.getNewsListView(), {
@@ -28,7 +27,6 @@ Ext.define('VoucherGuideForSilvers.controller.News', {
 		});
 		this.getNewsBackBtn().show();
 		this.getNewsTitleBar().setTitle('종합뉴스상세');
-		this.getNewsListViewTitle().setTitle(record.data.title);
 		this.getNewsListViewContent().setData(record.data);
 	},
 	
