@@ -7,7 +7,7 @@ Ext.define('VoucherGuideForSilvers.view.Home', {
 		iconCls: 'home',
 		cls: 'mainPanel',
 		
-		scrollable: true,
+//		scrollable: true,
 		
 		layout: {
 			type: 'vbox',

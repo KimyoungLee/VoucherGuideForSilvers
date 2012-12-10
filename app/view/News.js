@@ -57,8 +57,9 @@ Ext.define('VoucherGuideForSilvers.view.News', {
 				id: 'newsListViewContent',
 				tpl: [
 					'<div id="newsContent">',
-					'<h3><span>{title}</span></h3><br />',
-					'<div class="newsContent">{content}</div>'
+					'<h3><span>{title}</span></h3>',
+					'<div class="newsContent">{content}</div>',
+					'</div>'
 				]
 			}]
 		}]

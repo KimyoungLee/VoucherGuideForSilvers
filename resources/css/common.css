@@ -17,3 +17,8 @@
 		font-weight: bold;
 		background-color: #F7F7F7;
 	}
+
+	#infoContent div.infoContent, #newsContent div.newsContent {
+		padding: 10px;
+		line-height: 180%;
+	}

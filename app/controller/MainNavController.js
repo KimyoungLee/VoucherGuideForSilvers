@@ -22,7 +22,9 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 			infoListBtn: '#infoListBtn',
 			searchBtn: '#searchBtn',
 			relativeSiteBtn: '#relativeSiteBtn',
-			mainPanel: '#mainPanel'
+			mainPanel: '#mainPanel',
+			emergencyCallBtn: '#emergencyCallBtn',
+			counselCallBtn: '#counselCallBtn'
 		}
 	},
 	
@@ -66,7 +68,9 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 			// 긴급통화 버튼 선택시
 			var emergencyPhoneNumber = localStorage.emergencyPhoneNumber;
 			if(!localStorage.emergencyPhoneNumber) emergencyPhoneNumber = '119';
-			document.location.href = 'tel:'+ emergencyPhoneNumber;
+			window.open('tel:'+ emergencyPhoneNumber);
+
+			return;
 		}
 	}
 });

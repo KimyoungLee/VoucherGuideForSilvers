@@ -27,7 +27,7 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 		}, {
 			xtype: 'panel',
 			id: 'configFormPanel',
-			margin: 20,
+			margin: 10,
 			items: [{
 				xtype:'fieldset', 
 				title:'환경설정',
@@ -35,7 +35,7 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 				items: [{
 					xtype: 'sliderfield',
 					name: 'fontSize',
-					label: '글자 크기',
+					label: '글자크기',
 					id: 'fontSize',
 					store: 'settingsStore',
 					listeners: {
@@ -57,7 +57,7 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 				items: [{
 					xtype: 'textfield',
 					id: 'counselPhoneNumber',
-					label: '상담 전화번호',
+					label: '상담번호',
 					listeners: {
 						painted: function(textfield, eOpts){
 							if(localStorage.counselPhoneNumber)
@@ -69,7 +69,7 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 				}, {
 					xtype: 'textfield',
 					id: 'emergencyPhoneNumber',
-					label: '응급 전화번호',
+					label: '응급번호',
 					listeners: {
 						painted: function(textfield, eOpts) {
 							var emergencyPhoneNumber = localStorage.emergencyPhoneNumber;

@@ -40,7 +40,7 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 			xtype: 'panel',
 			id: 'searchFormPanel',
 			flex: 1,
-			margin: 20,
+			margin: 10,
 			items: [{
 				xtype: 'fieldset',
 				title: '검색할 지역을 선택하세요.',
@@ -90,8 +90,9 @@ Ext.define('VoucherGuideForSilvers.view.Search', {
 			store: 'organizationStore',
 			emptyText: '검색된 내용이 없습니다.',
 			itemTpl: [
-				'<div>{name}</div>',
-				'<div>{addr}</div>'
+				'<div id="searchListContent">',
+				'<span>{name} ({addr})</span>',
+				'</div>'
 			]
 		}, {
 			xtype: 'panel',

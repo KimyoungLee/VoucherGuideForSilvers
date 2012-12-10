@@ -22,7 +22,7 @@ Ext.define('VoucherGuideForSilvers.view.Site', {
 
 			emptyText: '등록된 내용이 없습니다.',
 
-			itemTpl: '<div id="siteContent"><span>{info} : <a href="{url}" target="_blank">{url}</a></span></div>'
+			itemTpl: '<div id="siteContent"><span>{info}</span><br /><span><a href="{url}" target="_blank">{url}</a></span></div>'
 		}]
 	}
 });
