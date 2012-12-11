@@ -68,7 +68,19 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 			// 긴급통화 버튼 선택시
 			var emergencyPhoneNumber = localStorage.emergencyPhoneNumber;
 			if(!localStorage.emergencyPhoneNumber) emergencyPhoneNumber = '119';
-			document.location.href = 'tel:'+ emergencyPhoneNumber;
+			
+			Ext.Msg.confirm('응급전화연결',
+					emergencyPhoneNumber +' 로 연결하시겠습니까?',
+					function(button) {
+						if (button == 'yes') {
+							document.location.href = 'tel:'+ emergencyPhoneNumber;
+						}
+						
+						tabPanel.animateActiveItem('homePanel', {
+							type: 'slide',
+							direction: 'right'
+						});
+			});
 		} else if (value._itemId == 'counselCallBtn') {
 			// 상담통화 버튼 선택시
 			var counselPhoneNumber = localStorage.counselPhoneNumber;
@@ -92,7 +104,18 @@ Ext.define('VoucherGuideForSilvers.controller.MainNavController', {
 							}
 				});
 			} else {
-				document.location.href = 'tel:'+ counselPhoneNumber;
+				Ext.Msg.confirm('상담전화연결',
+						counselPhoneNumber +' 로 연결하시겠습니까?',
+						function(button) {
+							if (button == 'yes') {
+								document.location.href = 'tel:'+ counselPhoneNumber;
+							}
+							
+							tabPanel.animateActiveItem('homePanel', {
+								type: 'slide',
+								direction: 'right'
+							});
+				});
 			}
 		}
 	}

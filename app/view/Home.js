@@ -1,6 +1,7 @@
 Ext.define('VoucherGuideForSilvers.view.Home', {
 	extend: 'Ext.Panel',
 	xtype: 'homePanel',
+	id: 'homeTabPanel',
 
 	config: {
 		title: '홈',

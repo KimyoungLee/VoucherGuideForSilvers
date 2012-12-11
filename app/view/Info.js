@@ -15,8 +15,6 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 			type: 'card',
 		},
 		
-		scrollable: true,
-		
 		items: [{
 			xtype: 'titlebar',
 			id: 'infoTitlebar',
@@ -37,6 +35,7 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 				style:{
 					'padding' : '0px 0px 30px 0px',
 				},
+				scrollable: true,
 				html: [
 					'<div id="infoContent">',
 					'<h3><span>목적</span></h3>',
@@ -48,6 +47,7 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 				style:{
 					'padding' : '0px 0px 30px 0px',
 				},
+				scrollable: true,
 				html:[
 					'<div id="infoContent">',
 					'<h3><span>서비스 대상</span></h3>',
@@ -60,6 +60,7 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 				style:{
 					'padding' : '0px 0px 30px 0px',
 				},
+				scrollable: true,
 				html: [
 					'<div id="infoContent">',
 					'<h3><span>서비스 내용</span></h3>',
@@ -71,6 +72,7 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 				style:{
 					'padding' : '0px 0px 30px 0px',
 				},
+				scrollable: true,
 				html:[
 					'<div id="infoContent"><h3><span>서비스 가격</span></h3>',
 					'<div class="infoContent"><ul><li>서비스 대상자의 소득 및 서비스 시간(일)에 따라 바우처 지원금을 차등 지원</li></ul><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><th>&nbsp;</th><th>&nbsp;</th><th>서비스가격</th><th>&nbsp;</th><th>정부지원금</th><th>&nbsp;</th><th>본인부담금</th></tr><tr><th rowspan="3">월 27시간<br />(9일)</th><td>차상위 초과</td><td>월 248,400원</td><td rowspan="6">=</td><td>월 212,400원</td><td rowspan="6">+</td><td>월 36,000원</td></tr><tr><td>차상위 계층</td><td>월 248,400원</td><td>월 230,400원</td><td>월 18,000원</td></tr><tr><td>기초생활수급자</td><td>월 248,400원</td><td>월 248,400원</td><td>무료</td></tr><tr><th rowspan="3">월 36시간<br />(12일)</th><td>차상위 초과</td><td>월 331,200원</td><td>월 283,200원</td><td>월 48,000원</td></tr><tr><td>차상위 계층</td><td>월 331,200원</td><td>월 307,200원</td><td>월 24,000원</td></tr><tr><td>기초생활수급자</td><td>월 331,200원</td><td>월 322,920원</td><td>월 8,280원</td></tr></table><ul><li>본인부담금 납부 기한 및 방법<br/>- (원칙) 매월 15~27일까지, (추가연장) 익월 1~10일까지<br/>- 결정통지서 및 바우처 카드에 명시된 지정 계좌에 무통장송금, 인터넷·폰뱅킹·ATM 등을 통해 본인부담금을 입금(예금주 : 서비스 대상자명)<br/>※ 본인부담금을 입금하지 않으면 바우처가 생성되지 않음에 유의</li></ul></div>',
@@ -81,6 +83,7 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 				style:{
 					'padding' : '0px 0px 30px 0px',
 				},
+				scrollable: true,
 				html:['<div id="infoContent"><h3><span>서비스 신청</span></h3>',
 					'<div class="infoContent">',
 					'<ul><li>신청권자 : 본인, 가족 또는 그 밖의 관계인</li><li>신청서 제출 장소 : 서비스 대상자의 주민등록상 주소지 읍·면·동 주민센터</li><li>신청기간 : 매월 1일 ~ 18일 (익월 1일부터 서비스 개시)</li><li>제출서류 : 신청서 등은 읍·면·동 주민센터에 비치되어 있으며, 신분증과 소득증명 자료 필요<br/>※ 제출서류는 방문 전 읍·면·동 주민센터로 문의</li></ul></div>',
@@ -91,6 +94,7 @@ Ext.define('VoucherGuideForSilvers.view.Info', {
 				style:{
 					'padding' : '0px 0px 30px 0px',
 				},
+				scrollable: true,
 				html:['<div id="infoContent"><h3><span>서비스 이용</span></h3><div class="infoContent"><ul><li>서비스 제공기관 : 서비스 대상자가 이용하고자 하는 기관을 선택하여 이용<br/>- 방문서비스 : 재가노인복지시설, 지역자활센터 등<br/>- 주간보호서비스 : 노인복지법 제38조 재가노인복지시설 중 주간보호서비스를 제공하는 기관<br/>- 서비스 대상자가 이용을 원하는 제공기관과 계약 후 서비스 이용<br/>※ 제공기관 연락처는 서비스 신청 후 시·군·구에서 통보되는 사회복지서비스 이용안내 문의 사회복지서비스 제공기관 안내를 참조</li><li>서비스 제공인력 : 노인요양보호사 자격증 소지자</li></ul></div></div>'].join('')
 			}]
 		}]
