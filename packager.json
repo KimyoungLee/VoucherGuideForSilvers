@@ -1,11 +1,11 @@
-{
+﻿{
 	/**
 	 * @cfg {String} applicationName
 	 * @required
 	 * This is the name of your application, which is displayed on the device when the app is installed. On IOS, this should match
 	 * the name of your application in the Apple Provisioning Portal.
 	 */
-	"applicationName":"Voucher Guide For Silvers",
+	"applicationName":"Voucher Guide",
 
 	/**
 	 * @cfg {String} applicationId
@@ -100,7 +100,8 @@
 	 * This is the location of your certificate.
 	 * This is required when you are developing for Android or you are developing on Windows.
 	 */
-	"certificatePath":"/path/to/certificate.file",
+	"certificatePath":"D:/project/hybrid/cert.csr",
+	"certificateAlias": "ninetails",
 
 	/**
 	 * @cfg {String} certificateAlias
@@ -113,7 +114,7 @@
 	 *
 	 * When using a certificatePath on Windows, you do not need to specify this.
 	 */
-	"certificatePassword":"ninetails#12345",
+	"certificatePassword":"ninetails",
 	/**
 	 * @cfg {String} certificatePassword
 	 * The password which was specified during certificate export
