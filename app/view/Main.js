@@ -5,7 +5,7 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 
 	config: {
 		tabBarPosition: 'bottom',
-		
+
 		items: [{
 			xtype: 'homePanel'
 		}, {
@@ -13,7 +13,7 @@ Ext.define('VoucherGuideForSilvers.view.Main', {
 			iconCls: 'phone1',
 			id:'emergencyCallBtn'
 		}, {
-			xtype: 'searchPanel',
+			xtype: 'searchPanel'
 		}, {
 			title: '상담통화',
 			iconCls: 'phone1',

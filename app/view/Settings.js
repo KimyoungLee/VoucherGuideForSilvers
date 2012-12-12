@@ -1,7 +1,7 @@
 Ext.define('VoucherGuideForSilvers.view.Settings', {
 	extend: 'Ext.Panel',
 	xtype: 'settingsPanel',
-	
+
 	requires: [
 		'Ext.TitleBar',
 		'Ext.field.Slider',
@@ -10,16 +10,16 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 		'Ext.field.Number',
 		'Ext.form.FieldSet'
 	],
-	
+
 	config: {
 		title: '설정',
 		iconCls: 'settings',
 		scrollable: true,
 
 		layout: {
-			align: 'middle',
+			align: 'middle'
 		},
-		
+
 		items: [{
 			xtype: 'titlebar',
 			title: '설정',
@@ -29,9 +29,10 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 			id: 'configFormPanel',
 			margin: 10,
 			items: [{
-				xtype:'fieldset', 
+				xtype:'fieldset',
 				title:'환경설정',
 				instructions: '적당한 크기를 선택하세요.',
+				hidden: true,
 				items: [{
 					xtype: 'sliderfield',
 					name: 'fontSize',
@@ -42,7 +43,7 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 						painted: function(textfield, eOpts){
 							if(localStorage.fontSize)
 								Ext.getCmp('fontSize').setValue(localStorage.fontSize);
-							else 
+							else
 								Ext.getCmp('fontSize').setValue(25);
 						}
 					},
@@ -51,7 +52,7 @@ Ext.define('VoucherGuideForSilvers.view.Settings', {
 					increment: 1
 				}]
 			}, {
-				xtype:'fieldset', 
+				xtype:'fieldset',
 				title:'전화번호',
 				instructions: '번호를 입력하시면 하단 탭바에서 전화 바로 걸기가 동작합니다.',
 				items: [{

@@ -7,12 +7,12 @@ Ext.define('VoucherGuideForSilvers.view.Home', {
 		title: '홈',
 		iconCls: 'home',
 		cls: 'mainPanel',
-		
+
 //		scrollable: true,
-		
+
 		layout: {
 			type: 'vbox',
-			align: 'middle',
+			align: 'middle'
 		},
 
 		items: [{
